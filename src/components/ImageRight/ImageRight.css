@@ -1,0 +1,36 @@
+.ImageRight{
+    display: flex;
+}
+
+.S-h1{
+    margin-top: 190px;
+    font-weight: 500;
+    font-size: 72px;
+}
+
+.span-image{
+    font-weight: 300;
+    font-size: 24px;
+}
+
+.b-image-container{
+    margin-top: 80px;
+}
+
+.b-image{
+    height: 40px;
+    width: 200px;
+    border-radius: 20px;
+    border : transparent;
+    color :black;
+    border:2px solid black;
+    background: white;
+    cursor: pointer;
+    font-size: 12px;
+    padding: 10px;
+}
+
+.b-image:hover{
+    transform: translateY(100);
+}
+

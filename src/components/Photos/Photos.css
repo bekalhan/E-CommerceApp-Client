@@ -1,0 +1,23 @@
+.Photos{
+    margin-top: 300px;
+}
+
+.f-photos{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+
+.p-images{
+    background: #eeffff;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.p-img{
+    width: 100%;
+}
+
+.s-photos{
+    display: grid;
+    grid-template-columns: 33% 34% 33%;
+}

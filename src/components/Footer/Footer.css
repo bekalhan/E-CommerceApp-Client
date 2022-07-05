@@ -1,0 +1,58 @@
+.Footer{
+    display: grid;
+    grid-template-columns: 33% 34% 33%;
+}
+
+.desc-root h1{
+    margin-left: 10px;
+}
+
+.desc-root article{
+    font-weight: 200;
+    margin: 10px;
+    padding: 5px;
+}
+
+.useful-links{
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+.u-links{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.f-links{
+    display: flex;
+    flex-direction: row;
+}
+
+.s-links{
+    display: flex;
+    flex-direction: row;
+}
+
+
+.f-links li{
+    text-decoration: none;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+.s-links li{
+    text-decoration: none;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+.contact{
+    margin-top: 1rem;
+}
+
+.contact h6{
+    font-size: 15px;
+}
+
+
+

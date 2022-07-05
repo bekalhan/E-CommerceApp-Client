@@ -1,0 +1,39 @@
+
+.Line{
+    background: #61deff;
+    text-align: center;
+    justify-content: center;
+    height: 25px;
+}
+
+.H-opt{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 30px;
+}
+
+.l-opt{
+    margin-top: 10px;
+    display: flex;
+}
+
+.l-opt h3{
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.H-opt ul{
+    margin-top: 30px;
+    display: flex;
+    margin-right: 40px;
+}
+
+.H-opt ul li{
+    display: flex;
+    flex-direction: column;
+    margin-left: 2rem;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+}

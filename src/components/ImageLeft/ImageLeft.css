@@ -1,0 +1,9 @@
+.ImageLeft{
+    display: flex;
+}
+
+.image-red{
+    height: 900px;
+    margin-left: 70px;
+}
+

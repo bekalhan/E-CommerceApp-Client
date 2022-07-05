@@ -1,0 +1,39 @@
+.Search{
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+    background: #ffebff;
+    height: 400px;
+}
+
+
+.s-search-h1{
+    display:flex;
+    flex-direction: column;
+    margin-top: 80px;
+    text-align: center;
+    font-weight: 800;
+    font-size: 48px;
+}
+
+.s-search-h3{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 200;
+}
+
+.s-search-input{
+    height: 30px;
+    width: 500px;
+    flex-direction: column;
+    margin-left: 320px;
+    margin-top: 20px;
+}
+
+.icon-search{
+    margin-left: 850px;
+}
+
+

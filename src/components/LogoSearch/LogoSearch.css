@@ -1,0 +1,20 @@
+.LogoSearch{
+    display: flex;
+    margin-left: 10px;
+}
+
+.search{
+    display: flex;
+}
+
+.i-search{
+    margin-top: 15px;
+    flex-direction: column;
+    height: 20px;
+}
+
+.s-icon{
+    margin-right: 5px;
+    margin-top: 15px;
+    cursor: pointer;
+}
