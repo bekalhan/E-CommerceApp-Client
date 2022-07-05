@@ -1,0 +1,37 @@
+.Register{
+    display: flex;
+    justify-content: center;
+    background: #f9ffdb;
+    height: 500px;
+}
+
+.formRegister{
+    background: white;
+    width: 400px;
+    display: grid;
+    grid: auto 40% auto;
+}
+
+.formRegister h2{
+    font-weight: 200;
+    font-size: 24px;
+    margin-left: 20px;
+}
+
+.formRegister input{
+    width: 300px;
+    height: 30px;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+.formRegister button{
+    margin-top: 30px;
+    text-align: center;
+    justify-content: center;
+    width: 150px;
+    height: 30px;
+    border:1px solid greenyellow;
+    background: white;
+    margin-left: 30px;
+}
