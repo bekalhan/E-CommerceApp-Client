@@ -11,8 +11,6 @@ function Home() {
         <Image />
         <Card />
         <Photos />
-        <Search />
-        <Footer />
     </div>
   )
 }

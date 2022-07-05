@@ -1,0 +1,5 @@
+.ProductDetail{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    background: #fffff0;
+}
