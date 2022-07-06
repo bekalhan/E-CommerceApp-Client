@@ -2,6 +2,7 @@
     display: grid;
     margin-top: 40px;
     grid-template-columns: 25% 25% 25% 25%;
+    margin: 20px;
 }
 
 .product-container{
@@ -11,4 +12,5 @@
 
 .product-img{
     width: 100%;
+    cursor: pointer;
 }

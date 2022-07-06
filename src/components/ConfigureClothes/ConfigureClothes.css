@@ -42,3 +42,10 @@
 .sort-product select{
     margin-right: 40px;
 }
+
+.product button{
+    margin-top: 26px;
+    width: 100px;
+    height: 25px;
+    margin-right: 20px;
+}
