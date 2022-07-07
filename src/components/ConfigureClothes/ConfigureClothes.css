@@ -49,3 +49,35 @@
     height: 25px;
     margin-right: 20px;
 }
+
+.product button{
+    margin-top: 26px;
+    width: 100px;
+    height: 25px;
+    margin-right: 20px;
+    margin-left: 30px;
+}
+
+.filtered-product-list{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+
+.filtered-product-list img{
+    width: 100%;
+    cursor: pointer;
+}
+
+.filter-product-container{
+    background: #eeffff;
+    margin: 10px;
+}
+
+.ConfigureClothes h3{
+    font-weight: 200;
+}
+
+.h3-all{
+    margin-left: 20px;
+    font-size: 30px;
+}

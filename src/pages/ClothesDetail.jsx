@@ -1,10 +1,11 @@
 import React from 'react';
 import ProductDetail from '../components/ProductDetail/ProductDetail';
 
-function ClothesDetail() {
+function ClothesDetail(props) {
+  const id = props.match.params.id;
   return (
     <div>
-        <ProductDetail />
+        <ProductDetail id={id} />
     </div>
   )
 }

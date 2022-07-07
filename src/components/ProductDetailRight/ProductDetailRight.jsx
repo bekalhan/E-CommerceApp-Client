@@ -1,29 +1,35 @@
 import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import './ProductDetailRight.css';
+import {getProductCtrl} from '../../redux/slices/Products/productSlices';
+import { useEffect } from 'react';
 
-function ProductDetailRight() {
+
+function ProductDetailRight(props) {
+
+    const id = props.id;
+
+    const dispatch = useDispatch();
+
+    const product = useSelector(store => store.products);
+    const {loading , serverErr , appErr , ProductDetails} = product;
+
+    useEffect(()=>{
+        dispatch(getProductCtrl(id))
+    },[]);
+
   return (
     <div className='ProductDetailRight'>
         <div className='product-name'>
-            <h3>Herman T-shirt</h3>
+            <h3>{ProductDetails?.title}</h3>
         </div>
         <div className='product-description'>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
+            {ProductDetails?.desc}
         </div>
         <div className='product-price'>
-            $ 120
+            {ProductDetails?.price} $
         </div>
         <div className='product-configure'>
-            <div>
-                <h3>Color</h3>
-                <select className="opt" id="" name="cars">
-                </select>
-            </div>
-            <div>
-                <h3>Size</h3>
-                <select className="opt" id="" name="cars">
-                </select>
-            </div>
             <div>
                 <h3>Quantity</h3>
                 <input type="number" />

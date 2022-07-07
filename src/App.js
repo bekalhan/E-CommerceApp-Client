@@ -22,7 +22,7 @@ function App() {
         <Route exact path="/register" component={Register} />
         <Route exact path="/login" component={Login} />
         <Route exact path = '/' component={Home} /> 
-        <Route exact path = '/product/:category' component={Clothes} />
+        <Route exact path = '/products/:category' component={Clothes} />
         <Route exact path = '/product/:id' component={ClothesDetail} />
         <PrivateProtectRoute exact path = "/cart" component={Cart} />
       </Switch>

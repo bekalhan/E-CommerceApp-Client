@@ -4,6 +4,9 @@ import './AllProduct.css';
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import {getAllProductsAction} from '../../redux/slices/Products/productSlices';
+import ConfigureClothes from '../ConfigureClothes/ConfigureClothes';
+import { Link } from "react-router-dom";
+
 
 function AllProduct(props) {
 
@@ -24,7 +27,11 @@ function AllProduct(props) {
     <div className='AllProduct'>
         {productList?.map((product)=>(
              <div className='product-container'>
-             <img className='product-img' src={product.img}></img>
+              <Link
+              to={`/product/${product.id}`}
+              >
+                 <img className='product-img' src={product.img}></img>
+              </Link> 
         </div>
         ))}
 

@@ -3,11 +3,12 @@ import ProductDetailLeft from '../ProductDetailLeft/ProductDetailLeft';
 import ProductDetailRight from '../ProductDetailRight/ProductDetailRight';
 import './ProductDetail.css';
 
-function ProductDetail() {
+function ProductDetail(props) {
+  const id = props.id;
   return (
     <div className='ProductDetail'>
-        <ProductDetailLeft />
-        <ProductDetailRight />
+        <ProductDetailLeft id={id} />
+        <ProductDetailRight id={id} />
     </div>
   )
 }

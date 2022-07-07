@@ -31,10 +31,6 @@ function ConfigureClothes(props) {
     const store = useSelector(store => store.products);
     const {loading , appErr ,serverErr , SelectedProductsList} = store;
 
-    console.log("bilgiler : ",SelectedProductsList);
-
-
-
     return (
     <div className='ConfigureClothes'>
         <div className='green-line'>
@@ -71,29 +67,24 @@ function ConfigureClothes(props) {
                 <option value="XL">XL</option>
 
                 </select>
+
+                <button type='submit'>filter</button>
+
             </div>
-          <div className='sort-product'>
-            <h3>Sort Products :</h3>
-          {/* <select
-            value={formik.values.price}
-            onChange={formik.handleChange("price")}
-            onBlur={formik.handleBlur("price")}
-          className="opt" id="" name="price">
-            <option value="Random">Random</option>
-            <option value="asc">Price(asc)</option>
-            <option value="desc">Price(desc)</option>
-            </select>    */}
-
-            <button type='submit'>filter</button>
-
-          </div>
-
-               
+            <div className='filtered-product-list'>
+                {SelectedProductsList?.map((product) =>(
+                  <div>
+                  <h3>Filtered Products</h3>
+                    <div className='filter-product-container'>
+                        <img src={product.img}></img>
+                    </div>
+                  </div>
+                  
+                ))}
+            </div>
           </form>
      </div>      
-
-     <AllProduct list={SelectedProductsList} />    
-        
+        <h3 className="h3-all">All Products</h3>
     </div>
   )
 }

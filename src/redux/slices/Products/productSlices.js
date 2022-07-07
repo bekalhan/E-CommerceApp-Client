@@ -31,7 +31,6 @@ export const getSelectedProductAction = createAsyncThunk(
     "/selected/products",
     async(filtered,{rejectWithValue,getState,dispatch})=>{
           //get user token
-          console.log("filtered slices : ",filtered);
           const user = getState()?.users;
          const { userAuth } = user;
          const config = {
@@ -47,6 +46,29 @@ export const getSelectedProductAction = createAsyncThunk(
                 if(!error.response) throw error;
                 return rejectWithValue(error?.response?.data);
             }
+    }
+)
+
+//get product clicked
+export const getProductCtrl = createAsyncThunk(
+    "/clicked/product",
+    async(id,{rejectWithValue, getState, dispatch})=>{
+   //get user token
+        const user = getState()?.users;
+        const { userAuth } = user;
+        const config = {
+        headers: {
+            Authorization: `Bearer ${userAuth?.token}`,
+                },
+            };
+        try{
+            const {data} = await axios.get(`${baseUrl}/api/product/${id}`,config);
+            return data;
+        }catch(error){
+            if(!error.response) throw error;
+            return rejectWithValue(error?.response?.data);
+        }
+
     }
 )
 
@@ -90,6 +112,27 @@ const productSlices = createSlice({
         });
 
         builder.addCase(getSelectedProductAction.rejected, (state, action)=>{
+            state.loading = false;
+            state.appErr = action?.payload?.message;
+            state.serverErr = action?.error?.message;
+        });
+
+        // get product action
+
+        builder.addCase(getProductCtrl.pending,(state, action)=>{
+            state.loading = true;
+            state.appErr= undefined;
+            state.serverErr = undefined;
+        });
+
+        builder.addCase(getProductCtrl.fulfilled, (state, action)=>{
+            state.loading = false;
+            state.ProductDetails = action?.payload;
+            state.appErr= undefined;
+            state.serverErr = undefined;
+        });
+
+        builder.addCase(getProductCtrl.rejected, (state, action)=>{
             state.loading = false;
             state.appErr = action?.payload?.message;
             state.serverErr = action?.error?.message;
